@@ -1,6 +1,7 @@
+import { NgOptimizedImage } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {RouterOutlet} from '@angular/router';
+import { RouterOutlet } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -18,13 +19,10 @@ import { HeaderComponent } from './components/header/header.component';
     SkillsComponent,
     ProjectsComponent,
     ContactComponent,
-    HeaderComponent
+    HeaderComponent,
   ],
-  imports: [
-    BrowserModule,
-    RouterOutlet
-  ],
+  imports: [BrowserModule, RouterOutlet, NgOptimizedImage],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

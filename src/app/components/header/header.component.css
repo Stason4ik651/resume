@@ -16,6 +16,9 @@
   color: #fff;
   text-decoration: none;
   font-weight: 600;
+  cursor: default;
+  opacity: 0;
+  animation: slideRight 2s ease forwards;
 }
 
 .navbar a {
@@ -25,9 +28,34 @@
   text-decoration: none;
   font-weight: 500;
   margin-left: 35px;
-  transition: .3s;
+  opacity: 0;
+  animation: slideTop 2s ease forwards;
+  animation-delay: calc(.2s * var(--i));
 }
 
 .navbar a:hover {
   color: #0ef;
 }
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideTop {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
