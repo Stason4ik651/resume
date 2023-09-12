@@ -11,3 +11,10 @@ body {
 }
 
 
+.sub-title {
+  font-size: 60px;
+}
+
+.sub-title span {
+  color: #00eeff;
+}

@@ -6,7 +6,8 @@
   align-items: center;
   justify-content: center;
   gap: 1.5%;
-  color: black;
+  color: #ffffff;
+  height: 100vh;
 }
 
 .about-img img {
