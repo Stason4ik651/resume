@@ -1,10 +1,12 @@
 <header class="header">
   <a class="logo" href="#">Portfolio</a>
-  <nav class="navbar">
-    <a class="active" href="#home" style="--i:1">Home</a>
-    <a href="#about" style="--i:2">About</a>
-    <a href="#skills" style="--i:3">Skills</a>
-    <a href="#projects" style="--i:4">Projects</a>
-    <a href="#contacts" style="--i:5">Contacts</a>
+  <div (click)="toggleMenu()" [ngClass]="{'bx-x': isMenuOpen}" class="bx bx-menu " id="menu-icon"></div>
+  <nav #navbar *ngIf="!isMenuOpen" class="navbar">
+    <a (click)="closeMenu()" class="active" href="#home" style="--i:1">Home</a>
+    <a (click)="closeMenu()" href="#about" style="--i:2">About</a>
+    <a (click)="closeMenu()" href="#skills" style="--i:3">Skills</a>
+    <a (click)="closeMenu()" href="#projects" style="--i:4">Projects</a>
+    <a (click)="closeMenu()" href="#contacts" style="--i:5">Contacts</a>
+    <span class="active-nav"></span>
   </nav>
 </header>

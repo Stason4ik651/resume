@@ -7,7 +7,7 @@
 
 body {
   color: #ededed;
-  background: #543b71;;
+  background: #17313a;
 }
 
 
@@ -17,4 +17,9 @@ body {
 
 .sub-title span {
   color: #00eeff;
+}
+
+section {
+  padding: 5%;
+  min-height: 100vh;
 }

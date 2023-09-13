@@ -1,6 +1,7 @@
 
 .about {
-  margin: 5%;
+  /*margin: 5%;*/
+  padding: 0 5%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
@@ -31,6 +32,12 @@
   font-weight: 600;
   box-shadow: 0 0 5px #00eeff,
   0 0 25px #00eeff;
+}
+
+.btn-box:hover {
+  box-shadow: 0 0 5px cyan,
+  0 0 25px cyan, 0 0 50px cyan,
+  0 0 100px cyan, 0 0 200px cyan;
 }
 
 .about-text h2 {
