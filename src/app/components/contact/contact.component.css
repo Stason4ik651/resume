@@ -54,7 +54,7 @@
 }
 
 .contact-icons i {
-  display: inline-block;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   width: 40px;
@@ -65,10 +65,10 @@
   font-size: 20px;
   color: #0ef;
   text-decoration: none;
-  margin: 30px;
-  transition: .5s ease;
-  animation: slideLeft 1s ease forwards;
-  animation-delay: calc(.2s * var(--i));
+  margin: 30px 15px 30px 0;
+  opacity: 0;
+  animation: slideLeft 2s ease forwards;
+  animation-delay: calc(.2s * var(--i))
 }
 
 .contact-icons i:hover {
