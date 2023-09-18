@@ -1,0 +1,16 @@
+<div class="wrapper">
+
+  <div class="calculator">
+    <app-display></app-display>
+    <div class="buttonsDiv">
+      <app-general-button *ngFor="let button of dataService.buttons.correctOrder" class="button">
+        <app-button-action *ngIf="button | enumPipe: 'actions'" [label]="button" class="button"></app-button-action>
+        <app-button-numeric *ngIf="button | enumPipe: 'numerics'" [label]="button" class="button"></app-button-numeric>
+        <app-button-operation *ngIf="button | enumPipe: 'operations'" [label]="button"
+                              class="button"></app-button-operation>
+      </app-general-button>
+    </div>
+  </div>
+
+</div>
+

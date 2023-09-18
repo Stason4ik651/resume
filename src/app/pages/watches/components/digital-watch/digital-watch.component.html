@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="digital-watches">
+    <div class="box">
+      <h2 class="digHours" id="digHours">
+        <app-numeric [numeric]="dateService.currentTime.hours"></app-numeric>
+      </h2>
+      <h2 class="dot">
+        <app-separator [separator]="':'"></app-separator>
+      </h2>
+      <h2 class="digMinutes" id="digMinutes">
+        <app-numeric [numeric]="dateService.currentTime.minutes"></app-numeric>
+      </h2>
+      <h2 class="dot">
+        <app-separator [separator]="':'"></app-separator>
+      </h2>
+      <h2 class="digSeconds" id="digSeconds">
+        <app-numeric [numeric]="dateService.currentTime.seconds"></app-numeric>
+      </h2>
+    </div>
+  </div>
+</div>

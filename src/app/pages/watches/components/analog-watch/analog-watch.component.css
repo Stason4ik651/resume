@@ -1,0 +1,96 @@
+.analog-wathes {
+  width: 30vw;
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/assets/images/watches.png);
+  background-size: cover;
+  box-shadow: 0 0 5px #036792, 0 0 25px #036792, 0 0 40px #036792, 0 0 60px #036792;
+  border-radius: 50%;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.analog-wathes::before {
+  content: '';
+  position: absolute;
+  width: 3%;
+  height: 3%;
+  border-radius: 50%;
+  background: #000;
+  z-index: 10;
+}
+
+.hour {
+  position: absolute;
+  /* width: 90%; */
+  height: 40%;
+}
+
+.hours {
+  width: 1%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  border-radius: 50%;
+}
+
+.hours::before {
+  content: '';
+  position: absolute;
+  width: 0.4vw;
+  height: 50%;
+  background: black;
+  z-index: 2;
+  border-radius: 6px 6px 0 0;
+}
+
+.minute {
+  position: absolute;
+  height: 50%;
+}
+
+.minutes {
+  width: 2%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  border-radius: 50%;
+}
+
+.minutes::before {
+  content: '';
+  position: absolute;
+  width: 0.26vw;
+  height: 59%;
+  background: #000;
+  z-index: 3;
+  border-radius: 6px 6px 0 0;
+}
+
+.second {
+  position: absolute;
+  height: 65%;
+}
+
+.seconds {
+  width: 1%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  border-radius: 50%;
+}
+
+.seconds::before {
+  content: '';
+  position: absolute;
+  width: 0.19vw;
+  height: 60%;
+  background: red;
+  z-index: 4;
+  border-radius: 6px 6px 0 0;
+}

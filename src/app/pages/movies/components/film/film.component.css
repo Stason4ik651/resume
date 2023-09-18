@@ -1,0 +1,67 @@
+.cover-inner {
+  position: relative;
+  width: 100%;
+  height: 85%;
+}
+
+.cover-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.cover-inner:hover {
+  filter: brightness(110%);
+  cursor: pointer;
+}
+
+.cover-inner:active {
+  filter: brightness(80%);
+}
+
+.film-info {
+  padding: 10px 0;
+}
+
+.title {
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+}
+
+.genre {
+  font-size: 14px;
+  color: #d04045;
+  font-weight: bold;
+  text-align: center;
+}
+
+.rating {
+  position: absolute;
+  top: 2%;
+  left: 4%;
+  border-radius: 50%;
+  width: 18%;
+  height: 9%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #333;
+  color: #fff;
+  font-size: 14px;
+}
+
+.rating-green {
+  border: 1px solid green;
+}
+
+.rating-orange {
+  border: 1px solid orange;
+}
+
+.rating-red {
+  border: 1px solid red;
+}
+
+

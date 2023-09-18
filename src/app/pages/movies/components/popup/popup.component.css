@@ -1,0 +1,74 @@
+.popup-content {
+  color: #fff;
+  max-width: 100%;
+  padding: 10px;
+  position: relative;
+  display: flex;
+}
+
+.title-popup {
+  font-size: 28px;
+  color: #fff;
+  text-align: center;
+}
+
+.genre-popup {
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+}
+
+.rating-popup {
+  font-size: 22px;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 1px #c80c0c7b solid;
+}
+
+
+.release {
+  font-size: 22px;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+}
+
+.popup-image {
+  width: 30%;
+}
+
+.popup-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.popup-text {
+  font-size: 20px;
+  width: 70%;
+  padding: 0 20px;
+  text-align: justify;
+}
+
+.popup-overview {
+  margin-top: 10px;
+}
+
+.popup-rating-green {
+  color: green;
+}
+
+.popup-rating-orange {
+  color: orange;
+}
+
+.popup-rating-red {
+  color: red;
+}
+
+.info-span {
+  color: #1f5df9;
+}
+
+

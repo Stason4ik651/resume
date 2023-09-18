@@ -1,0 +1,17 @@
+button {
+  background-color: #33333357;
+  color: white;
+}
+
+.equal {
+  background-color: rgba(9, 184, 9);
+}
+
+.percent {
+  color: rgba(9, 184, 9);
+}
+
+.clear {
+  color: orangered;
+}
+

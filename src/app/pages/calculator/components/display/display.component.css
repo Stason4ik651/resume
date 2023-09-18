@@ -1,0 +1,27 @@
+.display {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
+  font-size: 28px;
+  border-bottom: 1px solid #333;
+  margin-bottom: 20px;
+  height: 125px;
+}
+
+input {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  font-size: 1.7rem;
+  height: 100px;
+  border: none;
+  outline: none;
+  user-select: none;
+  background-color: #080808;
+  color: #fff;
+  text-align: right;
+  padding-right: 20px;
+  padding-left: 10px;
+}

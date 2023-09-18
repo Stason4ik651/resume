@@ -1,0 +1,18 @@
+<div class="cover-inner">
+  <img (click)="openPopup()"
+       [alt]="film.title"
+       [src]="
+        film.posterPath
+          ? 'http://image.tmdb.org/t/p/original' + film.posterPath
+          : '/assets/images/noposter.jpg'
+      "
+  />
+</div>
+<div class="film-info">
+  <div class="title">{{ film.title }}</div>
+  <div class="genre">{{ genres }}</div>
+  <div
+    class="rating rating-{{film.voteAverage >= 8 ? 'green' : film.voteAverage > 5 ? 'orange' : 'red'}}">{{film.voteAverage.toFixed(1)}}</div>
+</div>
+
+

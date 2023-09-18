@@ -1,0 +1,50 @@
+.digital-watches {
+  position: relative;
+  width: 50vw;
+  /* height: 250px; */
+  aspect-ratio: 66/22;
+  margin: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 5px #036792, 0 0 25px #036792, 0 0 40px #036792, 0 0 60px #036792;
+  border-radius: 2vw;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+}
+
+.digital-watches .box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  user-select: none;
+}
+
+.digital-watches .box h2 {
+  font-size: 9vw;
+  color: #000;
+}
+
+.digital-watches .box h2:nth-child(odd) {
+  padding: 0% 1%;
+  border-radius: 10px;
+  background: rgba(0, 173, 207, 0.6);
+  box-shadow: 0 0 5px #036792, 0 0 25px #036792, 0 0 40px #036792, 0 0 60px #036792;
+  margin: 0 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 1024px) {
+  .analog-wathes {
+    width: 60vw;
+    margin: 30px;
+  }
+
+  .digital-watches {
+    width: 70vw;
+  }
+
+  .digital-watches .box h2:nth-child(odd) {
+    padding: 3% 4%;
+  }
+}

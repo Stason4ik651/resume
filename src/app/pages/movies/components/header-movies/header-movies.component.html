@@ -1,0 +1,17 @@
+<div class="head-info">
+  <img alt="logo" src="/assets/images/logo-movie.png"/>
+  <a class="logo-link" href="/movies"><span class="logo-title">VAROSH KINO</span></a>
+
+
+  <span class="p-float-label">
+        <input [(ngModel)]="title" id="title" pInputText/>
+        <label for="title">title</label>
+    </span>
+  <span class="p-float-label">
+        <input [(ngModel)]="year" id="year" pInputText/>
+        <label for="year">year</label>
+    </span>
+  <p-button (click)="search()" label="Search"></p-button>
+
+
+</div>

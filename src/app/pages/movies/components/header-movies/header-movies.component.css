@@ -1,0 +1,25 @@
+.head-info {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 2%;
+}
+
+.head-info img {
+  width: 20%;
+}
+
+.logo-link {
+  text-decoration: none;
+  text-align: center;
+}
+
+.logo-title {
+  max-width: 100%;
+  font-size: 350%;
+  color: rgba(165, 0, 0, 0.545);
+  text-shadow: 0 1px 1px #ffffff74;
+  text-align: center;
+}
+

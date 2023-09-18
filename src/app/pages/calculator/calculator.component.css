@@ -1,0 +1,26 @@
+.wrapper {
+  background: #17313a;
+  display: flex;
+  height: 94.9vh;
+}
+
+.calculator {
+  width: 370px;
+  height: 570px;
+  border-radius: 20px;
+  box-shadow: 0 0 12px white;
+  background: #080808;
+  color: #fff;
+  padding: 14px;
+  margin: 180px auto;
+  user-select: none;
+}
+
+.buttonsDiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 3px;
+  padding: 0;
+}
+

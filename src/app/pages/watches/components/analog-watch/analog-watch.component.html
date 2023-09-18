@@ -1,0 +1,12 @@
+<div class="analog-wathes">
+  <div class="hour">
+    <div id="hours" class="hours" [style.transform]="'rotate(' + dateService.currentTime.hours * 30 + 'deg)'"></div>
+  </div>
+  <div class="minute">
+    <div id="minutes" class="minutes" [style.transform]="'rotate(' + dateService.currentTime.minutes * 6 + 'deg)'"></div>
+  </div>
+  <div class="second">
+    <div id="seconds" class="seconds" [style.transform]="'rotate(' + dateService.currentTime.seconds * 6 + 'deg)'"></div>
+  </div>
+</div>
+
