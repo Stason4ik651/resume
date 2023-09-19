@@ -64,7 +64,7 @@
   margin-bottom: 4rem;
 }
 
-@media screen and (max-width: 655px) {
+@media screen and (max-width: 787px) {
 
   .about-img {
     display: none;

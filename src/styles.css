@@ -361,13 +361,6 @@ h5 {
 
 }
 
-@media screen and (max-width: 655px) {
-  .home-imgHover img {
-    display: none;
-  }
-
-}
-
 
 @media screen and (max-width: 480px) {
   .popup-text {
