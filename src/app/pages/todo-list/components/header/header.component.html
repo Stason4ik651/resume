@@ -1,0 +1,16 @@
+<header>
+  <a class="logo" href="/">
+    <img src="/assets/images/logoTodo.png">
+  </a>
+  <div *ngIf="authService.isAuthenticated()" style="display: flex">
+    <div [routerLink]="'/profile'" class="group">
+      <div class="user"><i class="pi pi-user" style="font-size: 2.5rem"></i></div>
+      <!--                <span>{{UserName}}</span>-->
+    </div>
+    <div (click)="logout()" class="logout">
+
+      <i class="pi pi-sign-out" style="font-size: 1.9rem"></i>
+
+    </div>
+  </div>
+</header>

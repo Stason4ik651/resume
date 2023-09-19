@@ -1,13 +1,13 @@
 .home {
   position: relative;
   width: 100%;
+  display: flex;
   justify-content: space-between;
+  align-items: center;
   height: 100vh;
   background: url("/assets/images/backgif.gif");
   background-size: cover;
   background-position: center;
-  display: flex;
-  align-items: center;
   padding: 70px 10% 0;
 }
 
@@ -143,5 +143,19 @@
   100% {
     transform: translateY(0px);
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: 655px) {
+
+  .home {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    background: url("/assets/images/backgif.gif");
+    background-size: cover;
+    background-position: center;
+    padding: 70px 10% 0;
   }
 }

@@ -1,0 +1,79 @@
+* {
+  font-size: 20px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  height: 100px;
+  z-index: 1;
+
+}
+
+.user {
+  background-color: rgba(148, 115, 235, 0.66);
+  border-radius: 50%;
+  border: 2px solid black;
+  padding: 7px;
+  margin-top: 3px;
+  transition: .5s;
+}
+
+.user:hover {
+  filter: brightness(140%);
+  transform: scale(1.2);
+}
+
+.user:active {
+  filter: brightness(80%);
+}
+
+
+img {
+  width: 200px;
+
+}
+
+.logo {
+  height: 100%;
+  /*background-image: url("/assets/logoTodo.png");*/
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: .5s;
+}
+
+.logo:hover {
+  transform: scale(1.2);
+}
+
+.group {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.logout {
+
+  background-color: rgba(148, 115, 235, 0.66);
+  border-radius: 50%;
+  border: 2px solid black;
+  padding: 12px;
+  margin-top: 3px;
+  transition: .5s;
+}
+
+.logout:hover {
+  filter: brightness(140%);
+  transform: scale(1.2);
+}
+
+.logout:active {
+  filter: brightness(80%);
+}

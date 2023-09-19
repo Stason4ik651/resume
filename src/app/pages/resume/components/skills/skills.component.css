@@ -11,8 +11,8 @@
 
 .skills-container {
   width: 600px;
-  height: 500px;
-  padding: 75px 90px;
+  /*height: 500px;*/
+  padding: 25px 90px;
 }
 
 .heading {
@@ -28,7 +28,7 @@
 }
 
 .technical-bars .bar {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .technical-bars .bar:first-child {
@@ -89,6 +89,10 @@
   width: 85%;
 }
 
+.progress-line.typescript span {
+  width: 90%;
+}
+
 .progress-line.angular span {
   width: 75%;
 }
@@ -118,6 +122,11 @@
 .progress-line.javascript span::after {
   content: "85%";
 }
+
+.progress-line.typescript span::after {
+  content: "90%";
+}
+
 
 .progress-line.angular span::after {
   content: "75%";

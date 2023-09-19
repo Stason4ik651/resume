@@ -1,0 +1,59 @@
+/*@import "primeng/resources/themes/lara-light-blue/theme.css";*/
+/*@import "primeng/resources/primeng.css";*/
+/*@import "primeicons/primeicons.css";*/
+
+
+/*.todo-wrapper {*/
+
+/*  background: url(/assets/images/todoBg.jpg) no-repeat;*/
+/*  background-color: #9473eb;*/
+/*  font-family: var(--font-family);*/
+/*  width: 98vw;*/
+/*  height: 100%;*/
+/*  display: flex;*/
+/*  justify-content: center;*/
+/*  align-items: center;*/
+/*}*/
+
+
+/*.p-button.p-button-success, .p-buttonset.p-button-success > .p-button, .p-splitbutton.p-button-success > .p-button {*/
+/*  color: #ffffff;*/
+/*  background: #22C55E;*/
+/*  border: 1px solid #22C55E;*/
+/*  margin-right: 10px;*/
+/*}*/
+
+/*.p-dialog .p-dialog-content {*/
+/*  background: #ffffff;*/
+/*  color: #495057;*/
+/*  padding: 0 1.5rem 2rem 1.5rem;*/
+/*  height: 500px;*/
+/*}*/
+
+
+/*.p-datatable .p-datatable-tbody > tr > .column, .p-datatable .p-datatable-thead > tr > .column {*/
+/*  text-align: center;*/
+/*  width: 60px;*/
+/*  min-width: 60px;*/
+/*}*/
+
+/*h5 {*/
+/*  font-size: 20px;*/
+/*}*/
+
+/*.todoHeader {*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  justify-content: space-between;*/
+/*}*/
+
+/*.p-toast .p-toast-message.p-toast-message-success {*/
+/*  background: #ffffff;*/
+/*  border: solid #9473eb;*/
+/*  border-width: 0 0 0 6px;*/
+/*  color: black;*/
+/*}*/
+
+/*.p-toast .p-toast-message.p-toast-message-success .p-toast-message-icon, .p-toast .p-toast-message.p-toast-message-success .p-toast-icon-close {*/
+/*  color: #9473eb;*/
+/*}*/

@@ -1,0 +1,18 @@
+.header {
+  display: flex;
+  justify-content: center;
+  padding: 55px 0;
+}
+
+.header h1 {
+  color: #fff;
+  text-shadow: 0 0 12px #000;
+  font-size: 48px;
+}
+
+.container {
+  width: 100%;
+  min-width: 700px;
+
+}
+

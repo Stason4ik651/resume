@@ -1,58 +1,112 @@
-<section id="projects">
-  <div class="projects-title">
-    <h2 class="sub-title">My<span>Projects</span></h2>
-  </div>
-  <!--  <div class="wrapper">-->
-  <div class="projects">
-    <div class="main-text" id="project">
-      <div class="project-content">
-        <div [routerLink]="['/watches']" class="row">
-          <img alt="watches" src="../../../../../assets/images/watches.jpg">
-          <div class="layer">
-            <h5>WATCHES</h5>
-            <p>Analog and Digital WATCHES</p>
-            <a href="#"><i class="bx bx-link-external" style="color: #000"></i> </a>
+<!--<section id="projects">-->
+<!--  <div class="projects-title">-->
+<!--    <h2 class="sub-title">My<span>Projects</span></h2>-->
+<!--  </div>-->
+<!--  &lt;!&ndash;  <div class="wrapper">&ndash;&gt;-->
+<!--  <div class="projects">-->
+<!--    <div class="main-text" id="project">-->
+<!--      <div class="project-content">-->
+<!--        <div [routerLink]="['/watches']" class="row">-->
+<!--          <img alt="watches" src="../../../../../assets/images/watches.jpg">-->
+<!--          <div class="layer">-->
+<!--            <h5>WATCHES</h5>-->
+<!--            <p>Analog and Digital WATCHES</p>-->
+<!--            <a href="#"><i class="bx bx-link-external" style="color: #000"></i> </a>-->
+<!--          </div>-->
+<!--        </div>-->
+
+<!--        <div [routerLink]="['/calculator']" class="row">-->
+<!--          <img alt="" src="../../../../../assets/images/calculator.jpg">-->
+<!--          <div class="layer">-->
+<!--            <h5>CALCULATOR</h5>-->
+<!--            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.-->
+<!--            </p>-->
+<!--            <a href="#"><i class="bx bx-link-external" style="color: #000"></i> </a>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div [routerLink]="['/todo']" class="row">-->
+<!--          <img alt="" src="../../../../../assets/images/todo.jpg">-->
+<!--          <div class="layer">-->
+<!--            <h5>TODO LIST</h5>-->
+<!--            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.-->
+<!--            </p>-->
+<!--            <a href="#"><i class="bx bx-link-external" style="color: #000"></i> </a>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div [routerLink]="['/movies']" class="row">-->
+<!--          <img alt="" src="../../../../../assets/images/films.jpg">-->
+<!--          <div class="layer">-->
+<!--            <h5>MOVIE SITE</h5>-->
+<!--            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.-->
+<!--            </p>-->
+<!--            <a href="#"><i class="bx bx-link-external" style="color: #000"></i> </a>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div [routerLink]="['/snake']" class="row">-->
+<!--          <img alt="" src="../../../../../assets/images/snake.jpg">-->
+<!--          <div class="layer">-->
+<!--            <h5>SNAKE GAME</h5>-->
+<!--            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.-->
+<!--            </p>-->
+<!--            <a href="#"><i class="bx bx-link-external" style="color: #000"></i> </a>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  &lt;!&ndash;  </div>&ndash;&gt;-->
+<!--</section>-->
+
+<section class="projects" id="projects">
+  <h2 class="sub-title">My<span>Projects</span></h2>
+
+  <div class="projects-row">
+    <div class="projects-column">
+      <h3 class="title">This section showcases some of my projects where I utilized and adhered to the basic principles
+        of Angular</h3>
+
+      <div class="projects-box">
+        <div class="projects-content">
+          <div class="progress">
+            <div class="about-img calculator">
+              <img alt="Calculator" src="/assets/images/calculator.jpg">
+              <span [routerLink]="['/calc']" class="circle-spin"></span>
+            </div>
+            <h3>Calculator</h3>
           </div>
+          <div class="progress">
+            <div class="about-img">
+              <img alt="About Me" class="todo" src="/assets/images/todo.jpg">
+              <span [routerLink]="['/todo']" class="circle-spin"></span>
+            </div>
+            <h3>Todo's </h3>
+          </div>
+          <div class="progress">
+            <div class="about-img">
+              <img alt="About Me" class="movie" src="/assets/images/films.jpg">
+              <span [routerLink]="['/movies']" class="circle-spin"></span>
+            </div>
+            <h3>Movie's</h3></div>
+          <div class="progress">
+            <div class="about-img">
+              <img alt="About Me" src="/assets/images/snake.jpg">
+              <span [routerLink]="['/snake']" class="circle-spin"></span>
+            </div>
+            <h3>Snake Game </h3>
+          </div>
+          <div class="progress">
+            <div class="about-img">
+              <img src="/assets/images/watches.jpg">
+              <span [routerLink]="['/watches']" class="circle-spin"></span>
+            </div>
+            <h3>Watches </h3>
+          </div>
+
         </div>
 
-        <div [routerLink]="['/calculator']" class="row">
-          <img alt="" src="../../../../../assets/images/calculator.jpg">
-          <div class="layer">
-            <h5>CALCULATOR</h5>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            </p>
-            <a href="#"><i class="bx bx-link-external" style="color: #000"></i> </a>
-          </div>
-        </div>
-        <div class="row">
-          <img alt="" src="../../../../../assets/images/todo.jpg">
-          <div class="layer">
-            <h5>TODO LIST</h5>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            </p>
-            <a href="#"><i class="bx bx-link-external" style="color: #000"></i> </a>
-          </div>
-        </div>
-        <div [routerLink]="['/movies']" class="row">
-          <img alt="" src="../../../../../assets/images/films.jpg">
-          <div class="layer">
-            <h5>MOVIE SITE</h5>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            </p>
-            <a href="#"><i class="bx bx-link-external" style="color: #000"></i> </a>
-          </div>
-        </div>
-        <div [routerLink]="['/snake']" class="row">
-          <img alt="" src="../../../../../assets/images/snake.jpg">
-          <div class="layer">
-            <h5>SNAKE GAME</h5>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            </p>
-            <a href="#"><i class="bx bx-link-external" style="color: #000"></i> </a>
-          </div>
-        </div>
       </div>
     </div>
   </div>
-  <!--  </div>-->
+
 </section>
+

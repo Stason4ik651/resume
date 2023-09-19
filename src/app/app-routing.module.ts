@@ -4,6 +4,7 @@ import { CalculatorComponent } from './pages/calculator/calculator.component';
 import { MovieComponent } from './pages/movies/movie.component';
 import { ResumeComponent } from './pages/resume/resume.component';
 import { GameBoardComponent } from './pages/snake-game/game-board/game-board.component';
+import { TodoComponent } from './pages/todo-list/todo.component';
 import { WatchesComponent } from './pages/watches/watches.component';
 
 const routes: Routes = [
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'calculator', component: CalculatorComponent },
   { path: 'snake', component: GameBoardComponent },
   { path: 'movies', component: MovieComponent },
+  { path: 'todo', component: TodoComponent },
 ];
 
 @NgModule({

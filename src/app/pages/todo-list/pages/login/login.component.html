@@ -1,0 +1,14 @@
+<div class="wrapper">
+    <div class="form-box">
+        <form class="form">
+            <span class="title">Log In</span>
+            <div class="form-container">
+                <input [(ngModel)]="email" [ngModelOptions]="{standalone: true}" class="input" placeholder="Email"
+                       type="email">
+            </div>
+            <button (click)="login(email)">Log in</button>
+        </form>
+
+    </div>
+</div>
+
