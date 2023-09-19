@@ -18,7 +18,8 @@ body {
 
 
 .sub-title {
-  font-size: 60px;
+  /*font-size: 60px;*/
+  font-size: calc(50px + 16 * (100vw / 1280));
 }
 
 .sub-title span {
@@ -30,25 +31,6 @@ section {
   min-height: 100vh;
 }
 
-:root {
-  --background-color: #282846;
-  --board-color: rgba(248, 248, 248, 0.79);
-  --snake-color: #fed049;
-  --food-color: rgba(248, 31, 31, 0.78);
-
-  --dpad-radius: 17%;
-  --dpad-radius-in: 20%;
-  --dpad-fg: #ddd;
-  --dpad-fg-hover: #eee;
-  --dpad-bg: #fff;
-  --arrowcolor: #aaa;
-  --tri-sml-a: 13px;
-  --tri-sml-b: 19px;
-  --tri-lrg-a: 13px;
-  --tri-lrg-b: 19px;
-  --dpad-arrow-shift: 5px;
-  --dpad-arrow-move: 35%;
-}
 
 /* Snake styles */
 
@@ -197,6 +179,56 @@ section {
   justify-content: center;
   align-items: center;
   padding-top: 150px;
+}
+
+/*Задній фон #todo*/
+#todo .p-paginator {
+  background: white;
+  /*color: #0077e3;*/
+  border: solid #e9ecef;
+  border-width: 0;
+  border-radius: 0;
+}
+
+/*Неактивні цифри #todo*/
+#todo .p-paginator .p-paginator-pages .p-paginator-page {
+  color: #000;
+  border-radius: 5px;
+}
+
+/*Активна цифра, колір #todo*/
+
+#todo .p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
+  color: #0014f6;
+}
+
+/*Колір для стрілок #todo*/
+#todo .p-paginator .p-paginator-first,
+#todo .p-paginator .p-paginator-prev,
+#todo .p-paginator .p-paginator-next,
+#todo .p-paginator .p-paginator-last {
+  color: black;
+  border-radius: 5px;
+}
+
+/*Hover для стрілок #todo*/
+#todo .p-paginator .p-paginator-first:not(.p-disabled):not(.p-highlight):hover,
+#todo .p-paginator .p-paginator-prev:not(.p-disabled):not(.p-highlight):hover,
+#todo .p-paginator .p-paginator-next:not(.p-disabled):not(.p-highlight):hover,
+#todo .p-paginator .p-paginator-last:not(.p-disabled):not(.p-highlight):hover {
+  background: #3b82f6;
+  color: beige;
+}
+
+/*Hover для цифр #todo*/
+#todo .p-paginator .p-paginator-pages
+#todo .p-paginator-page:not(.p-highlight):hover {
+  background: #7a7a7a;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 

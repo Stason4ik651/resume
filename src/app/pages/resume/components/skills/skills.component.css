@@ -163,7 +163,8 @@
 .radial-bars .radial-bar {
   width: 50%;
   height: 170px;
-  margin-bottom: 10px;
+  margin-top: 50px;
+  margin-bottom: 57px;
   position: relative;
 }
 
@@ -265,5 +266,19 @@
   opacity: 0;
 }
 
+@media screen and (max-width: 787px) {
 
+  .skills-container {
+    padding: 25px 0;
+  }
 
+}
+
+@media screen and (max-width: 300px) {
+
+  .radial-bars {
+    flex-direction: column;
+    align-content: center;
+  }
+
+}
