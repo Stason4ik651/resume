@@ -1,7 +1,3 @@
-<!--<div class="header">-->
-<!--  <h1>TODO list</h1>-->
-<!--</div>-->
-
 <div class="todo-wrapper" id="todo">
 
 
@@ -143,6 +139,7 @@
 </div>
 
 <p-dialog [(visible)]="this.m.todoDialog" [modal]="true" [style]="{ width: '450px' }" header="Todo Details"
+          id="tododialog"
           styleClass="p-fluid">
   <ng-template pTemplate="content">
 
@@ -180,7 +177,7 @@
   </ng-template>
 </p-dialog>
 
-<p-confirmDialog [style]="{ width: '450px' }"></p-confirmDialog>
+<p-confirmDialog [style]="{ width: '450px' }" id="todoDelete"></p-confirmDialog>
 
 <br>
 <br>

@@ -1,5 +1,6 @@
-<header class="header">
-  <a class="logo" href="#">Portfolio</a>
+<!--suppress ALL -->
+<header [ngClass]="menuClass || 'header'">
+  <a class="logo" href="#">Dolyk</a>
   <div (click)="toggleMenu()" [ngClass]="{'bx-x': isMenuOpen}" class="bx bx-menu " id="menu-icon"></div>
   <nav #navbar *ngIf="!isMenuOpen" class="navbar">
     <a (click)="closeMenu()" class="active" href="#home" style="--i:1">Home</a>

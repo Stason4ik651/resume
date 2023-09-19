@@ -11,6 +11,19 @@
   scroll-behavior: smooth;
 }
 
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #1e777c;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(7, 7, 7, 0.8);
+  border-radius: 20px;
+}
+
 body {
   color: #ededed;
   background: #17313a;
@@ -43,7 +56,7 @@ section {
 .head {
   background-color: transparent;
   background-image: url("assets/images/snakeHeadr.png");
-  background-size: 140%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   border: none;
@@ -52,8 +65,7 @@ section {
 .food {
   border-radius: 50%;
   background-image: url("assets/images/Apple.png");
-  background-size: 105%;
-
+  background-size: cover;
 }
 
 .obstacle {
@@ -72,11 +84,13 @@ section {
 .p-dialog .p-dialog-header {
   background: #272727e7;
   border: 1px #c80c0c7b solid;
+
 }
 
 .p-dialog .p-dialog-content {
   background: #272727e7;
   border: 1px #c80c0c7b solid;
+
 }
 
 .p-dialog .p-dialog-header .p-dialog-title {
@@ -221,7 +235,7 @@ section {
 }
 
 /*Hover для цифр #todo*/
-#todo .p-paginator .p-paginator-pages
+#todo .p-paginator .p-paginator-pages,
 #todo .p-paginator-page:not(.p-highlight):hover {
   background: #7a7a7a;
   color: black;
@@ -231,19 +245,50 @@ section {
   cursor: pointer;
 }
 
+#todo .p-inputtext,
+#tododialog .p-inputtext {
+  background: #fff;
+  color: #000;
+}
+
+#tododialog .p-dialog .p-dialog-header,
+#tododialog .p-dialog .p-dialog-header .p-dialog-title {
+  background: #fff;
+  color: #000;
+  border: none;
+}
+
+#tododialog .p-dialog .p-dialog-content {
+  background: #ffffff;
+  color: #495057;
+  padding: 0 1.5rem 2rem 1.5rem;
+  height: 500px;
+  border: none;
+}
+
+#tododialog .p-button.p-button-text {
+  background: #3b82f6;
+  color: #fff;
+}
+
+#todoDelete .p-dialog .p-dialog-header,
+#todoDelete .p-dialog .p-dialog-header .p-dialog-title,
+#todoDelete .p-dialog-content {
+  background: white;
+  color: #333;
+  border: none;
+}
+
+#todoDelete .p-dialog .p-dialog-footer button {
+  background: #3b82f6;
+}
+
 
 .p-button.p-button-success, .p-buttonset.p-button-success > .p-button, .p-splitbutton.p-button-success > .p-button {
   color: #ffffff;
   background: #22C55E;
   border: 1px solid #22C55E;
   margin-right: 10px;
-}
-
-.p-dialog .p-dialog-content {
-  background: #ffffff;
-  color: #495057;
-  padding: 0 1.5rem 2rem 1.5rem;
-  height: 500px;
 }
 
 
@@ -275,15 +320,16 @@ h5 {
   color: #9473eb;
 }
 
-/*.p-paginator {*/
-/*  border-radius: 0;*/
-/*}*/
 
+@media only screen and (max-width: 1390px) {
 
-/*.p-paginator .p-paginator-pages .p-paginator-page {*/
-/*  color: #000000;*/
-/*  border-radius: 5px;*/
-/*}*/
+  .food,
+  .head {
+    border-radius: 50%;
+    background-size: 150%;
+    background-position: center;
+  }
+}
 
 
 @media (max-width: 1100px) {
@@ -307,17 +353,14 @@ h5 {
     height: 66vw;
   }
 
-  /*.rating {*/
-  /*  width: 150px;*/
-  /*  height: 150px;*/
-  /*}*/
   .popup-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 100%;
+    max-width: 50%;
   }
+
 
   .popup-text {
     width: 100%;
@@ -332,10 +375,6 @@ h5 {
   .popup-image img {
     margin: 0 auto;
     width: 100%;
-  }
-
-  .vote-buttons {
-    justify-content: space-evenly;
   }
 
 
@@ -364,8 +403,9 @@ h5 {
   }
 
   .popup-content {
-    max-width: 100%;
+    max-width: 150%;
   }
+
 
   .head-info {
     display: flex;

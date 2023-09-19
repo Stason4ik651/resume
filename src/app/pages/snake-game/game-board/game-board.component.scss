@@ -1,18 +1,4 @@
 
-body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  font-family: 'Anton', sans-serif;
-}
-
-.game-board {
-  background-image: url("/assets/images/bg2.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
 .container {
   margin: 0;
   height: 100vh;
@@ -145,7 +131,7 @@ body {
         &:after {
           left: 47%;
           top: 47%;
-          border-width: var(--tri-lrg-b) var(--tri-lrg-a) 0px var(--tri-lrg-a);
+          border-width: var(--tri-lrg-b) var(--tri-lrg-a) 0 var(--tri-lrg-a);
           border-color: var(--arrowcolor) transparent transparent transparent;
         }
 
@@ -227,7 +213,7 @@ body {
   }
 
   .score-card {
-    background: rgb(46, 119, 5);
+    //background: rgb(46, 119, 5);
     padding: 5px;
     color: var(--board-color);
     display: flex;
@@ -344,6 +330,14 @@ body {
 
 .icon:hover + .tooltip {
   display: block;
+}
+
+@media only screen and (max-width: 1390px) {
+
+  .container .game-board {
+    width: 90%;
+
+  }
 }
 
 

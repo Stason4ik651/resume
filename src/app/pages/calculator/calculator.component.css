@@ -1,7 +1,7 @@
 .wrapper {
   background: #17313a;
-  display: flex;
-  height: 94.9vh;
+  margin-inline: auto;
+  max-width: 100%;
 }
 
 .calculator {
