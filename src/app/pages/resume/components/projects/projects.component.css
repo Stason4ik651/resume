@@ -69,7 +69,7 @@
   height: 100%;
   object-fit: cover;
   padding: 1rem;
-  border-radius: 8%;
+  border-radius: 20%;
 }
 
 .about-img .circle-spin {
