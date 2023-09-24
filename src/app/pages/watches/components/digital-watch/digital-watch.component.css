@@ -4,7 +4,7 @@
   /* height: 250px; */
   aspect-ratio: 66/22;
   margin: 30px;
-  background: rgba(255, 255, 255, 0.05);
+  background: #0fc0cc;
   box-shadow: 0 0 5px #036792, 0 0 25px #036792, 0 0 40px #036792, 0 0 60px #036792;
   border-radius: 2vw;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -25,10 +25,10 @@
 }
 
 .digital-watches .box h2:nth-child(odd) {
-  padding: 0% 1%;
+  padding: 0 1%;
   border-radius: 10px;
-  background: rgba(0, 173, 207, 0.6);
-  box-shadow: 0 0 5px #036792, 0 0 25px #036792, 0 0 40px #036792, 0 0 60px #036792;
+  background: #00eeff;
+  /*box-shadow: 0 0 5px #036792, 0 0 25px #036792, 0 0 40px #036792, 0 0 60px #036792;*/
   margin: 0 10px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   border-right: 1px solid rgba(255, 255, 255, 0.1);
