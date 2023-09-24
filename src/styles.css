@@ -234,6 +234,7 @@ section {
   color: beige;
 }
 
+
 /*Hover для цифр #todo*/
 #todo .p-paginator .p-paginator-pages,
 #todo .p-paginator-page:not(.p-highlight):hover {

@@ -35,11 +35,7 @@
 }
 
 @media (max-width: 1024px) {
-  .analog-wathes {
-    width: 60vw;
-    margin: 30px;
-  }
-
+  
   .digital-watches {
     width: 70vw;
   }
