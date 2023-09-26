@@ -20,17 +20,19 @@
 
 .contact-info {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1000px;
   align-items: center;
   justify-content: center;
   padding: 0 20px;
 }
 
+
 .card {
   background: #001921c2;
   padding: 0 20px;
-  margin: 0 10px;
+  margin: 10px 10px;
   width: calc(33% - 20px);
   height: 200px;
   display: flex;
