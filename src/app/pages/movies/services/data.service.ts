@@ -8,10 +8,9 @@ import { Genres } from '../shared/interfaces/genres';
 export class DataService {
   films!: Film[];
   selectedMovie!: Film;
-  popup = false;
+  popup: boolean = false;
 
   private _genres!: [Genres];
-  private _totalPerPage!: number;
   private _totalCount!: number;
   private _totalPages!: number;
 
@@ -21,18 +20,6 @@ export class DataService {
 
   set genres(value: [Genres]) {
     this._genres = value;
-  }
-
-  // get totalPerPage(): number {
-  //   return this._totalPerPage;
-  // }
-  //
-  // set totalPerPage(value: number) {
-  //   this._totalPerPage = value;
-  // }
-
-  get totalCount(): number {
-    return this._totalCount;
   }
 
   set totalCount(value: number) {
@@ -47,7 +34,7 @@ export class DataService {
     this._totalPages = value > 500 ? 500 : value;
   }
 
-  convertIdsToGenres(genreIds: number[]) {
+  convertIdsToGenres(genreIds: number[]): string {
     return genreIds.map((id: number) => this._genres[id]).join(', ');
   }
 }

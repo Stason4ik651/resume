@@ -13,7 +13,7 @@ export class ResponseProcessService {
     private dataService: DataService,
   ) {}
 
-  async responseDistributions() {
+  async responseDistributions(): Promise<void> {
     const data = await this.apiService.loadData();
     this.dataService.films = data.results.map((result: any): Film => {
       return {
@@ -35,11 +35,20 @@ export class ResponseProcessService {
     this.dataService.totalPages = data.total_pages;
   }
 
-  async saveAndProcessGenres() {
+  async saveAndProcessGenres(): Promise<void> {
     const data = await this.apiService.loadGenres();
     this.dataService.genres = data.genres.reduce((res: any, item: Genres) => {
       res[item.id] = item.name;
       return res;
     }, {});
+  }
+
+  async responseTrailer(): Promise<string> {
+    const data = await this.apiService.loadTrailer();
+    console.log(data);
+    return (
+      'https://www.youtube.com/watch?v=' +
+      data.results[data.results.length - 1].key
+    );
   }
 }

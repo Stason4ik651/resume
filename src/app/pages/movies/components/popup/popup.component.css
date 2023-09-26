@@ -71,4 +71,9 @@
   color: #1f5df9;
 }
 
+.trailer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 

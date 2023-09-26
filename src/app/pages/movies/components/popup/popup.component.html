@@ -19,10 +19,27 @@
           class="popup-rating-{{film.voteAverage >= 8 ? 'green' : film.voteAverage > 5 ? 'orange' : 'red'}}">
                   {{film.voteAverage ? film.voteAverage.toFixed(1) : 'No votes'}}</span></div>
       </div>
+
       <div class="popup-overview">
         {{film.overview}}
       </div>
+
     </div>
   </div>
+  <div class="trailer">
+    <!--    <iframe-->
+    <!--      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"-->
+    <!--      allowfullscreen frameborder="0"-->
+    <!--      height="315" src="https://www.youtube.com/watch?v=oxkQbFtwWjc"-->
+    <!--      title="YouTube video player"-->
+    <!--      width="700"></iframe>-->
+    <iframe
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen frameborder="0"
+      height="315" src="https://www.youtube.com/embed/oxkQbFtwWjc?si=DdkoaMpV3c07_4OV"
+      title="YouTube video player"
+      width="650"></iframe>
+  </div>
+  
 
 </p-dialog>
