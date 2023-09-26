@@ -21,8 +21,8 @@ export class Model {
   time: number = 0;
 
   eatFoodSound: HTMLAudioElement = new Audio('assets/sounds/eating.wav');
-  deathSound: HTMLAudioElement = new Audio('assets/sounds/o-kurva.wav');
-  eatSnakeSound: HTMLAudioElement = new Audio('assets/sounds/eralash.wav');
+  deathSound: HTMLAudioElement = new Audio('assets/sounds/gameover.wav');
+  eatSnakeSound: HTMLAudioElement = new Audio('assets/sounds/blood.wav');
 
   readonly baseSpeed: number = 3;
   private _level: number = 1;
@@ -61,6 +61,6 @@ export class Model {
   }
 
   levelUpdate(): void {
-    this.level = Math.ceil((this.score + 1) / 10);
+    this.level = Math.ceil((this.score + 1) / 1);
   }
 }
