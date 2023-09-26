@@ -7,11 +7,19 @@
   background: #001921;
 }
 
+.upward {
+  position: fixed;
+  cursor: pointer;
+  display: none;
+}
+
+.upward.active {
+  display: block;
+}
 
 .top {
-  /*position: fixed;*/
-  bottom: 2.1rem;
-  right: 2.1rem;
+  bottom: 0.1rem;
+  right: 0.1rem;
 }
 
 .top i {
@@ -24,3 +32,10 @@
 .top i:hover {
   filter: brightness(200%);
 }
+
+.top i:active {
+  bottom: 50px;
+  transition: 0.3s all;
+}
+
+
