@@ -14,6 +14,8 @@
   padding: 14px;
   margin: 180px auto;
   user-select: none;
+  aspect-ratio: 1/1.54
+
 }
 
 .buttonsDiv {
@@ -22,5 +24,19 @@
   justify-content: space-around;
   margin: 3px;
   padding: 0;
+  /*aspect-ratio: 1/1*/
 }
 
+.button {
+  width: 21%;
+  aspect-ratio: 1/1
+}
+
+@media screen and (max-width: 500px) {
+  .calculator {
+    width: 100%;
+    height: calc(100vh - 77.59px);
+    margin: 0;
+    border-radius: 0;
+  }
+}

@@ -1,6 +1,7 @@
 button {
-  width: 72px;
-  height: 72px;
+  width: 100%;
+  /*height: 72px;*/
+  aspect-ratio: 1/1;
   background: #33333357;
   border-radius: 50%;
   text-align: center;
@@ -14,6 +15,7 @@ button {
   outline: none;
   font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
 }
+
 button:hover {
   filter: contrast(80%)
 }
