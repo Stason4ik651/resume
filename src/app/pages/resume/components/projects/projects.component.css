@@ -62,6 +62,8 @@
 
 .about-img:hover {
   transform: scale(110%);
+  filter: drop-shadow(0px 0px 15px rgb(0, 243, 255));
+
 }
 
 .about-img img {
@@ -82,57 +84,35 @@
   cursor: pointer;
 }
 
-.text-justify {
-  justify-content: center;
-  align-self: center;
-}
-
-.info-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-}
-
 .title {
   color: #00eeff;
 }
 
-.info-table-container {
-  max-height: 400px;
-  overflow-y: auto;
 
+@keyframes rotBGimg {
+  from {
+    transform: rotate(0deg);
+  }
 
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-.info-table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: center;
-  background-color: #868686;
-
-
+.card::after {
+  content: '';
+  position: absolute;
+  background: url('/assets/images/snake.jpg');
+  background-size: cover;
+  inset: 5px;
+  border-radius: 15px;
 }
 
-.info-table td, .info-table th {
-  border: 1px solid black;
-  padding: 8px;
-  text-align: left;
-  font-size: 1.5rem;
-}
+/* .card:hover:before {
+  background-image: linear-gradient(180deg, rgb(81, 255, 0), purple);
+  animation: rotBGimg 3.5s linear infinite;
+} */
 
-.info-table tr:nth-child(even) {
-  background-color: #696969;
-
-}
-
-.info-table th {
-  background-color: #4CAF50;
-  color: white;
-}
-
-.close {
-  margin: 2rem;
-}
 
 @media (max-width: 1700px ) {
   .projects-box {
