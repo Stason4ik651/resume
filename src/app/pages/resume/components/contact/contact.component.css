@@ -5,6 +5,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
 }
 
 .contact h2 {
@@ -105,6 +106,45 @@ button:active {
   transition: 200ms;
 }
 
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1.5rem 2%;
+  background: #001921;
+}
+
+.upward {
+  position: fixed;
+  cursor: pointer;
+  display: none;
+}
+
+.upward.active {
+  display: block;
+}
+
+.top {
+  bottom: 0.1rem;
+  right: 0.1rem;
+}
+
+.top i {
+  color: #000;
+  background: #0ef;
+  font-size: 40px;
+  border-radius: 0.5rem;
+}
+
+.top i:hover {
+  filter: brightness(200%);
+}
+
+.top i:active {
+  bottom: 50px;
+  transition: 0.3s all;
+}
 
 @media screen and (max-width: 850px) {
   .contact-info {

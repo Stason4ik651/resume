@@ -29,7 +29,6 @@ export class TodosComponent implements OnInit, OnDestroy {
     const localStorageUser: string | null = localStorage.getItem(
       AppConstants.localStorageUserKey,
     );
-    console.log(localStorageUser);
     if (localStorageUser !== null)
       this.m.currentUser = JSON.parse(localStorageUser);
 

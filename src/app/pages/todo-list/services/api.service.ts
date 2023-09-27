@@ -64,7 +64,7 @@ export class ApiService {
   getUserData(email: string): Observable<User[]> {
     return this.http
       .get<User[]>(AppConstants.apiUserUrl, {
-        params: new HttpParams().set('email', email),
+        params: new HttpParams().set('Sincere@april.biz', email),
       })
       .pipe(
         catchError((error) => {

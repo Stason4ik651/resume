@@ -12,7 +12,7 @@ export class FooterComponent {
   onScroll(): void {
     const scroll = document.querySelector('.upward') as HTMLElement;
     if (scroll) {
-      scroll.classList.toggle('active', window.scrollY > 900);
+      scroll.classList.toggle('active', window.scrollY > 600);
     }
   }
 }
