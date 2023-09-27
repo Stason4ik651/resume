@@ -402,6 +402,13 @@ h5 {
     width: 100%;
   }
 
+  .trailer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
 
 }
 
@@ -428,7 +435,7 @@ h5 {
   }
 
   .popup-content {
-    max-width: 150%;
+    max-width: 100%;
   }
 
 

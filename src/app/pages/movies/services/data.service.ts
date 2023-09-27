@@ -9,10 +9,17 @@ export class DataService {
   films!: Film[];
   selectedMovie!: Film;
   popup: boolean = false;
-
   private _genres!: [Genres];
   private _totalCount!: number;
   private _totalPages!: number;
+
+  get totalCount(): number {
+    return this._totalCount;
+  }
+
+  set totalCount(value: number) {
+    this._totalCount = value;
+  }
 
   get genres(): [Genres] {
     return this._genres;
@@ -20,10 +27,6 @@ export class DataService {
 
   set genres(value: [Genres]) {
     this._genres = value;
-  }
-
-  set totalCount(value: number) {
-    this._totalCount = value;
   }
 
   get totalPages(): number {

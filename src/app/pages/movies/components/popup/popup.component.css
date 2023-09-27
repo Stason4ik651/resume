@@ -1,3 +1,4 @@
+
 .popup-content {
   color: #fff;
   max-width: 100%;
@@ -42,6 +43,7 @@
 .popup-image img {
   width: 100%;
   border-radius: 10px;
+  border: 1px solid #721818;
 }
 
 .popup-text {
@@ -77,3 +79,7 @@
   align-items: center;
 }
 
+iframe {
+  margin-top: 20px;
+  border: 1px solid #721818;
+}

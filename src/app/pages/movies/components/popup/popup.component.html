@@ -4,11 +4,11 @@
 
   <div class="popup-content">
     <div class="popup-image">
-      <img [alt]=""
-           [src]="film.posterPath
+      <img [src]="film.posterPath
           ? 'http://image.tmdb.org/t/p/original' + film.posterPath
           : '/assets/images/noposter.jpg'
-      "/></div>
+      "
+           alt="poster"/></div>
     <div class="popup-text">
       <div class="film-info">
 
@@ -27,19 +27,15 @@
     </div>
   </div>
   <div class="trailer">
-    <!--    <iframe-->
-    <!--      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"-->
-    <!--      allowfullscreen frameborder="0"-->
-    <!--      height="315" src="https://www.youtube.com/watch?v=oxkQbFtwWjc"-->
-    <!--      title="YouTube video player"-->
-    <!--      width="700"></iframe>-->
     <iframe
+      [src]="trailerUrl"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen frameborder="0"
-      height="315" src="https://www.youtube.com/embed/oxkQbFtwWjc?si=DdkoaMpV3c07_4OV"
+      allowfullscreen
+      frameborder="0" height="315"
       title="YouTube video player"
-      width="650"></iframe>
+      width="90%"></iframe>
+    
   </div>
-  
+
 
 </p-dialog>

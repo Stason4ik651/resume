@@ -45,9 +45,8 @@ export class ResponseProcessService {
 
   async responseTrailer(): Promise<string> {
     const data = await this.apiService.loadTrailer();
-    console.log(data);
     return (
-      'https://www.youtube.com/watch?v=' +
+      'https://www.youtube.com/embed/' +
       data.results[data.results.length - 1].key
     );
   }

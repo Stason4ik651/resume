@@ -28,6 +28,5 @@ export class PopupComponent implements OnInit {
     this.trailerUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
       await this.responseService.responseTrailer(),
     );
-    console.log(this.trailerUrl);
   }
 }

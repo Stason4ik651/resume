@@ -3,8 +3,7 @@
 
     <app-header-movies></app-header-movies>
 
-
-    <h1 *ngIf="dataService.totalPages < 1" class="nothingFound">
+    <h1 *ngIf="dataService.totalCount < 1" class="nothingFound">
       Nothing was found for your request
     </h1>
     <div class="films">
