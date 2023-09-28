@@ -245,7 +245,7 @@
     aspect-ratio: 2/1;
     display: grid;
     align-self: center;
-    grid-template-columns: repeat(30, 1fr);
+    grid-template-columns: repeat(35, 1fr);
     grid-template-rows: repeat(18, 1fr);
     border-radius: 20px;
     border: 3px solid red;
@@ -293,7 +293,7 @@
 .icon-container {
   position: relative;
   display: inline-block;
-
+  z-index: 20;
 }
 
 .icon {
@@ -337,8 +337,17 @@
 
   .container .game-board {
     width: 90%;
-
   }
+
+  .score-card h3 {
+    font-size: 12px;
+  }
+
+  .restart-button {
+    font-size: 12px;
+  }
+
+
 }
 
 

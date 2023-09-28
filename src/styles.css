@@ -76,11 +76,6 @@ section {
 
 /* Films Styles */
 
-.body-noscroll {
-  overflow-y: hidden;
-}
-
-
 .p-dialog .p-dialog-header {
   background: #272727e7;
   border: 1px #c80c0c7b solid;

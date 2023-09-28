@@ -13,7 +13,7 @@ export class TodoService {
 
   init(m: GeneralModel): void {
     this.m = m;
-    const storedTodos = localStorage.getItem('todos');
+    const storedTodos: string | null = localStorage.getItem('todos');
     if (storedTodos) {
       this.m.todos = JSON.parse(storedTodos);
     }

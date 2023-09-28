@@ -1,4 +1,4 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import Typed from 'typed.js';
 
 @Component({
@@ -11,7 +11,7 @@ export class HomeComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     const typed: Typed = new Typed('.text', {
-      strings: ['Frontend Developer', 'Web Designer'],
+      strings: ['Frontend Developer'],
       typeSpeed: 100,
       backSpeed: 10,
       backDelay: 1000,
