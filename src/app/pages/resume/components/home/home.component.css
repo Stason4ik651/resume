@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   background: url("/assets/images/backgif.gif");
   background-size: cover;
   background-position: center;
@@ -161,11 +161,14 @@
     flex-direction: column-reverse;
     justify-content: center;
     text-align: center;
-    height: 100vh;
     background: url("/assets/images/backgif.gif");
     background-size: cover;
     background-position: center;
     padding: 70px 10% 0;
+  }
+
+  .home-content h1 {
+    font-size: 20px;
   }
 
   .home-imgHover img {

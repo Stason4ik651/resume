@@ -1,11 +1,11 @@
 import { OperationsEnum } from './operations.enum';
 
 export class CalculatorValuesModel {
-  private _first = '0';
+  private _first: string = '0';
 
-  private _second = '';
+  private _second: string = '';
 
-  private _operator = '';
+  private _operator: string = '';
 
   get first() {
     return this._first;
@@ -19,29 +19,29 @@ export class CalculatorValuesModel {
     return this._operator;
   }
 
-  set operator(operator) {
+  set operator(operator: string) {
     this._operator = operator;
   }
 
-  get displayValue() {
+  get displayValue(): string {
     return this._first + ' ' + this._operator + ' ' + this._second;
   }
 
-  get currentOperandValue() {
+  get currentOperandValue(): string {
     return this._operator ? this._second : this._first;
   }
 
-  set currentOperandValue(value) {
+  set currentOperandValue(value: string) {
     if (this._operator) this._second = value;
     else this._first = value;
   }
 
-  equal() {
+  equal(): void {
     if (!this._operator) return;
 
     if (this._second !== '') {
-      const first = parseFloat(this._first);
-      const second = parseFloat(this._second);
+      const first: number = parseFloat(this._first);
+      const second: number = parseFloat(this._second);
 
       switch (this._operator) {
         case OperationsEnum.Plus:
@@ -66,14 +66,13 @@ export class CalculatorValuesModel {
     }
   }
 
-  clearAll() {
+  clearAll(): void {
     this._first = '0';
     this._second = '';
     this._operator = '';
   }
 
-  backspace() {
-    console.log('xui');
+  backspace(): void {
     if (this._second !== '') {
       this._second = this._second.slice(0, -1);
     } else if (this._operator !== '') {
@@ -86,7 +85,7 @@ export class CalculatorValuesModel {
     }
   }
 
-  percent() {
+  percent(): void {
     if (this._second !== '')
       this._second = String(parseFloat(this._second) / 100);
     else {
@@ -95,19 +94,19 @@ export class CalculatorValuesModel {
     }
   }
 
-  negateNumber() {
+  negateNumber(): void {
     if (this._operator)
       this._second =
         this._second !== '' ? String(parseFloat(this._second) * -1) : '';
     else this._first = String(parseFloat(this._first) * -1);
   }
 
-  private invalidNumber() {
+  private invalidNumber(): boolean {
     return /[^0-9.\-e+]/.test(this._first);
   }
 
-  private convertResult() {
-    const buffer = this._first
+  private convertResult(): void {
+    const buffer: string = this._first
       .toLocaleString()
       .replace(',', '.')
 

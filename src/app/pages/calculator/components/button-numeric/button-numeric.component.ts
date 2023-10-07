@@ -14,15 +14,15 @@ export class ButtonNumericComponent {
 
   constructor(private dataService: DataService) {}
 
-  onButtonClick() {
+  onButtonClick(): void {
     this.updateCurrentValue();
   }
 
-  private invalidInput() {
+  private invalidInput(): boolean {
     return /[^0-9.\-]/.test(this.dataService.values.currentOperandValue);
   }
 
-  private updateCurrentValue() {
+  private updateCurrentValue(): void {
     if (this.invalidInput()) this.dataService.values.currentOperandValue = '0';
     if (this.dataService.values.currentOperandValue.length > 8) return;
 

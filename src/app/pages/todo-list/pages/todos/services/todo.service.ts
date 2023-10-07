@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { MessageService } from 'primeng/api';
+import { AppConstants } from '../../../shared/constans/constans';
 import { GeneralModel } from '../../../shared/types/general.model';
 import { Todo } from '../shared/interfaces/todo';
 
@@ -58,7 +59,9 @@ export class TodoService {
   }
 
   editTodo(todo: Todo): void {
-    const foundTodo = this.m.todos.find((t) => t.id === todo.id);
+    const foundTodo: Todo | undefined = this.m.todos.find(
+      (t) => t.id === todo.id,
+    );
     if (foundTodo) {
       Object.assign(foundTodo, todo);
 
@@ -81,6 +84,6 @@ export class TodoService {
   }
 
   private saveTodosLocally(): void {
-    localStorage.setItem('todos', JSON.stringify(this.m.todos));
+    localStorage.setItem(AppConstants.todos, JSON.stringify(this.m.todos));
   }
 }

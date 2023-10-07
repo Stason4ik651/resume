@@ -15,7 +15,6 @@
   margin: 180px auto;
   user-select: none;
   aspect-ratio: 1/1.54
-
 }
 
 .buttonsDiv {
@@ -24,7 +23,6 @@
   justify-content: space-around;
   margin: 3px;
   padding: 0;
-  /*aspect-ratio: 1/1*/
 }
 
 .button {

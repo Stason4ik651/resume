@@ -15,7 +15,7 @@ export class ButtonActionComponent {
 
   constructor(private dataService: DataService) {}
 
-  onButtonClick() {
+  onButtonClick(): void {
     switch (this.label) {
       case ActionsEnum.Clear:
         this.dataService.values.clearAll();

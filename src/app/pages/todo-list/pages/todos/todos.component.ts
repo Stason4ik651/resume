@@ -2,7 +2,6 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 
 import { ConfirmationService, MessageService } from 'primeng/api';
 import { Subscription } from 'rxjs';
-import { ApiService } from '../../services/api.service';
 import { AppConstants } from '../../shared/constans/constans';
 import { UnsavedChangesGuard } from '../../shared/guards/unsaved-changes.guard';
 import { GeneralModel } from '../../shared/types/general.model';
@@ -18,7 +17,6 @@ export class TodosComponent implements OnInit, OnDestroy {
   m: GeneralModel = new GeneralModel();
 
   constructor(
-    public readonly apiService: ApiService,
     public readonly todoService: TodoService,
     private readonly messageService: MessageService,
     private readonly confirmationService: ConfirmationService,
@@ -31,8 +29,6 @@ export class TodosComponent implements OnInit, OnDestroy {
     );
     if (localStorageUser !== null)
       this.m.currentUser = JSON.parse(localStorageUser);
-
-    this.apiService.init(this.m);
     this.todoService.init(this.m);
     this.unsavedChangesGuard.init(this.m);
   }
@@ -68,7 +64,7 @@ export class TodosComponent implements OnInit, OnDestroy {
       message: 'Are you sure you want to delete ' + todo.title + '?',
       header: 'Confirm',
       icon: 'pi pi-exclamation-triangle',
-      accept: () => {
+      accept: (): void => {
         this.todoService.deleteTodo(todo);
         this.m.todo = {};
       },
@@ -92,7 +88,7 @@ export class TodosComponent implements OnInit, OnDestroy {
     }
   }
 
-  getSeverity(status: undefined | boolean) {
+  getSeverity(status: undefined | boolean): string {
     return status ? 'success' : '';
   }
 

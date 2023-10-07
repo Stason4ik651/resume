@@ -1,6 +1,6 @@
 export class AppConstants {
   static gameBoardContainer: string = '.game-board';
   static localStorageKey: string = 'bestScore';
-  static readonly gridSizeX = 35;
-  static readonly gridSizeY = 18;
+  static gridSizeX = 35;
+  static gridSizeY = 18;
 }
