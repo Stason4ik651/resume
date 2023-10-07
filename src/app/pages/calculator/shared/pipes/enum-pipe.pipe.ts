@@ -8,15 +8,15 @@ import { OperationsEnum } from '../types/operations.enum';
 })
 export class EnumPipe implements PipeTransform {
   transform(label: any, buttonType: string): boolean {
-    if (buttonType === 'actions')
+    if (buttonType === 'actions') {
       return Object.values(ActionsEnum).includes(label);
-
-    if (buttonType === 'numerics')
+    }
+    if (buttonType === 'numerics') {
       return Object.values(NumericsEnum).includes(label);
-
-    if (buttonType === 'operations')
+    }
+    if (buttonType === 'operations') {
       return Object.values(OperationsEnum).includes(label);
-
+    }
     return false;
   }
 }

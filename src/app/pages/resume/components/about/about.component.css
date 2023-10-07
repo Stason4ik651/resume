@@ -9,7 +9,7 @@
   justify-items: center;
   gap: 1.5%;
   color: #ffffff;
-  min-height: 100vh;
+  height: 100vh;
 }
 
 .about-img img {
@@ -79,12 +79,12 @@
     gap: 1.5%;
     text-align: center;
     color: #ffffff;
-    height: calc(100vh + 90px);
+    height: 100vh;
   }
 
   .about-text p {
     color: aliceblue;
-    font-size: 15px;
+    font-size: 20px;
     line-height: 1.4;
     margin-bottom: 4rem;
     text-align: center;

@@ -81,7 +81,7 @@
           <td class="column">
             <p-cellEditor>
               <ng-template pTemplate="input">
-                <p-dropdown [(ngModel)]="todo.completed"
+                <p-dropdown [(ngModel)]="todo.completed "
                             [options]="this.m.statuses" id="completed">
                   <ng-template pTemplate="selectedItem">
                     <p-tag [severity]="getSeverity(todo.completed)"

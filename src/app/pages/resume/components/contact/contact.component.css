@@ -151,10 +151,6 @@ button:active {
     flex-direction: column;
   }
 
-  .contact h2 {
-    font-size: 50px;
-  }
-
   .card {
     width: 100%;
     max-width: 300px;

@@ -14,15 +14,15 @@ export class ButtonOperationComponent {
 
   constructor(private dataService: DataService) {}
 
-  onButtonClick(): void {
+  onButtonClick() {
     this.setOperator(this.label);
   }
 
-  private invalidNumber(): boolean {
+  private invalidNumber() {
     return /[^0-9.\-e+]/.test(this.dataService.values.first);
   }
 
-  private setOperator(operator: string): void {
+  private setOperator(operator: string) {
     if (!this.dataService.values.first) {
       this.dataService.values.currentOperandValue = '0';
       this.dataService.values.operator = operator;
