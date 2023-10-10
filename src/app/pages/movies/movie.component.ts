@@ -15,17 +15,17 @@ export class MovieComponent {
     public readonly dataService: DataService,
     private responseProcessService: ResponseProcessService,
   ) {
-    responseProcessService
+    this.responseProcessService
       .saveAndProcessGenres()
       .then()
-      .catch((error) => {
-        console.error('Сталася помилка:', error);
+      .catch((error): void => {
+        console.error('Error:', error);
       });
-    responseProcessService
+    this.responseProcessService
       .responseDistributions()
       .then()
-      .catch((error) => {
-        console.error('Сталася помилка:', error);
+      .catch((error): void => {
+        console.error('Error:', error);
       });
   }
 }

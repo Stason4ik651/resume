@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class FiltersService {
-  _apiKey: string = '5874acfd11651a28c55771624f7021f4';
+  private _apiKey: string = '5874acfd11651a28c55771624f7021f4';
   private _title: string = '';
   private _year: string = '';
   private _page: number = 1;
