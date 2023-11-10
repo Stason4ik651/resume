@@ -12,10 +12,12 @@
       ></app-film>
     </div>
 
-    <div class="paginate">
+    <div class="paginate" id="filmPaginator">
       <app-paginator></app-paginator>
     </div>
   </div>
 
 </div>
-<app-popup *ngIf="dataService.popup"></app-popup>
+<div class="filmPop" id="filmPop">
+  <app-popup *ngIf="dataService.popup"></app-popup>
+</div>

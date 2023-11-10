@@ -17,7 +17,7 @@ export class FilmComponent implements OnInit {
     this.genres = this.dataService.convertIdsToGenres(this.film.genreIds);
   }
 
-  openPopup() {
+  openPopup(): void {
     this.dataService.selectedMovie = this.film;
     this.dataService.popup = true;
   }

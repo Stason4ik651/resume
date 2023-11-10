@@ -42,7 +42,6 @@ export class GameBoardComponent implements OnInit, AfterViewInit, OnDestroy {
     this.timer.init(this.m);
     this.inputService.init(this.m);
     this.obstacleService.init(this.m);
-    // this.audioService.init(this.m);
     this.m.bestScore =
       Number(localStorage.getItem(AppConstants.localStorageKey)) || 0;
 

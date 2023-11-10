@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-
 import { Position } from '../shared/interfaces/position';
 import { DirectionKeys } from '../shared/types/direction-keys';
 import { Model } from '../shared/types/model';

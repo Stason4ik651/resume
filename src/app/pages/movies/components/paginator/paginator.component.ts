@@ -22,7 +22,7 @@ export class PaginatorComponent {
       .responseDistributions()
       .then()
       .catch((error: any): void => {
-        console.error('Сталася помилка:', error);
+        console.error('Error:', error);
       });
   }
 }

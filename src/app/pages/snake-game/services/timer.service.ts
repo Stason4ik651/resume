@@ -8,8 +8,6 @@ export class TimerService {
   private startTime: number = -10;
   private accumulatedPausedTime: number = 0;
 
-  constructor() {}
-
   init(m: Model): void {
     this.m = m;
   }

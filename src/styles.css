@@ -12,7 +12,7 @@
 }
 
 body::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 body::-webkit-scrollbar-track {
@@ -76,6 +76,20 @@ section {
 
 /* Films Styles */
 
+
+#filmPop .p-dialog-content::-webkit-scrollbar {
+  width: 10px;
+}
+
+#filmPop .p-dialog-content::-webkit-scrollbar-track {
+  background: #c80c0c7b;
+}
+
+#filmPop .p-dialog-content::-webkit-scrollbar-thumb {
+  background-color: rgba(7, 7, 7, 1);
+  border-radius: 20px;
+}
+
 .p-dialog .p-dialog-header {
   background: #272727e7;
   border: 1px #c80c0c7b solid;
@@ -130,7 +144,7 @@ section {
   border-color: #000;
 }
 
-.paginate .p-paginator {
+#filmPaginator.paginate .p-paginator {
   background: #1f202d;
   color: #6c757d;
   border: solid #e9ecef;
@@ -138,31 +152,31 @@ section {
   padding: 0.5rem 1rem;
 }
 
-.paginate .p-paginator .p-paginator-pages .p-paginator-page {
+#filmPaginator.paginate .p-paginator .p-paginator-pages .p-paginator-page {
   color: #fff;
   border-radius: 5px;
 }
 
-.paginate .p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
+#filmPaginator.paginate .p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
   color: #ce1a1a;
 }
 
-.paginate .p-paginator .p-paginator-first, .p-paginator .p-paginator-prev, .p-paginator .p-paginator-next, .p-paginator .p-paginator-last {
+#filmPaginator.paginate .p-paginator .p-paginator-first, .p-paginator .p-paginator-prev, .p-paginator .p-paginator-next, .p-paginator .p-paginator-last {
   color: #fff;
   border-radius: 5px;
 }
 
-.paginate .p-paginator .p-paginator-first:not(.p-disabled):not(.p-highlight):hover, .p-paginator .p-paginator-prev:not(.p-disabled):not(.p-highlight):hover, .p-paginator .p-paginator-next:not(.p-disabled):not(.p-highlight):hover, .p-paginator .p-paginator-last:not(.p-disabled):not(.p-highlight):hover {
+#filmPaginator.paginate .p-paginator .p-paginator-first:not(.p-disabled):not(.p-highlight):hover, .p-paginator .p-paginator-prev:not(.p-disabled):not(.p-highlight):hover, .p-paginator .p-paginator-next:not(.p-disabled):not(.p-highlight):hover, .p-paginator .p-paginator-last:not(.p-disabled):not(.p-highlight):hover {
   background: #e9ecef;
   color: #343a40;
 }
 
-.paginate .p-paginator .p-paginator-first:not(.p-disabled):not(.p-highlight):hover, .p-paginator .p-paginator-prev:not(.p-disabled):not(.p-highlight):hover, .p-paginator .p-paginator-next:not(.p-disabled):not(.p-highlight):hover, .p-paginator .p-paginator-last:not(.p-disabled):not(.p-highlight):hover {
+#filmPaginator.paginate .p-paginator .p-paginator-first:not(.p-disabled):not(.p-highlight):hover, .p-paginator .p-paginator-prev:not(.p-disabled):not(.p-highlight):hover, .p-paginator .p-paginator-next:not(.p-disabled):not(.p-highlight):hover, .p-paginator .p-paginator-last:not(.p-disabled):not(.p-highlight):hover {
   background: rgba(200, 12, 12, 0.482);
   color: #fff;
 }
 
-.paginate .p-paginator .p-paginator-pages .p-paginator-page:not(.p-highlight):hover {
+#filmPaginator.paginate .p-paginator .p-paginator-pages .p-paginator-page:not(.p-highlight):hover {
   background: rgba(200, 12, 12, 0.482);
   color: #fff;
   font-weight: bold;
@@ -176,26 +190,23 @@ section {
   color: rgb(247 63 82);
 }
 
-/* Todo Styles */
+/*!* Todo Styles *!*/
 .todo-wrapper {
-
   font-family: var(--font-family);
-  /*width: 100vw;*/
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 150px;
+  margin: 150px 0;
+  max-width: 100%;
+
 }
 
 /*Задній фон #todo*/
 #todo .p-paginator {
   background: white;
-  /*color: #0077e3;*/
-  border: solid #e9ecef;
-  border-width: 0;
   border-radius: 0;
 }
+
 
 /*Неактивні цифри #todo*/
 #todo .p-paginator .p-paginator-pages .p-paginator-page {
@@ -256,7 +267,7 @@ section {
   background: #ffffff;
   color: #495057;
   padding: 0 1.5rem 2rem 1.5rem;
-  height: 500px;
+  height: 250px;
   border: none;
 }
 
@@ -282,18 +293,21 @@ section {
   color: #ffffff;
   background: #22C55E;
   border: 1px solid #22C55E;
-  margin-right: 10px;
 }
 
 
 .p-datatable .p-datatable-tbody > tr > .column, .p-datatable .p-datatable-thead > tr > .column {
   text-align: center;
-  width: 60px;
-  min-width: 60px;
+
+}
+
+.p-datatable .p-datatable-tbody > tr > td {
+  /*max-width: 600px;*/
+  word-break: break-all;
 }
 
 h5 {
-  font-size: 20px;
+  font-size: 2px;
 }
 
 .todoHeader {
@@ -340,7 +354,6 @@ h5 {
   transition: 0.3s all;
 }
 
-
 @media only screen and (max-width: 1390px) {
 
   .food,
@@ -379,6 +392,7 @@ h5 {
     justify-content: center;
     align-items: center;
     max-width: 50%;
+
   }
 
 
@@ -395,13 +409,6 @@ h5 {
   .popup-image img {
     margin: 0 auto;
     width: 100%;
-  }
-
-  .trailer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
   }
 
 

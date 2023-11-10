@@ -10,9 +10,9 @@
   font-size: 48px;
 }
 
-.container {
-  width: 100%;
-  /*min-width: 700px;*/
 
+@media screen and (max-width: 600px) {
+  .p-table {
+    width: 100%;
+  }
 }
-

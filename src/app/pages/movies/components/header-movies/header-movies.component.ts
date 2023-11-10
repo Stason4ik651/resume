@@ -8,23 +8,23 @@ import { ResponseProcessService } from '../../services/response-process.service'
   styleUrls: ['./header-movies.component.css'],
 })
 export class HeaderMoviesComponent {
-  title = '';
-  year = '';
+  title: string = '';
+  year: string = '';
 
   constructor(
     private filtersService: FiltersService,
     private responseProcessService: ResponseProcessService,
   ) {}
 
-  search() {
+  search(): void {
     this.filtersService.title = this.title;
     this.filtersService.year = this.year;
     this.filtersService.page = 1;
     this.responseProcessService
       .responseDistributions()
       .then()
-      .catch((error) => {
-        console.error('Сталася помилка:', error);
+      .catch((error): void => {
+        console.error('Error:', error);
       });
   }
 }

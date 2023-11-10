@@ -1,30 +1,29 @@
 <div class="todo-wrapper" id="todo">
 
 
-  <div>
-    <p-toast></p-toast>
+  <p-toast></p-toast>
 
 
-    <p-table #dt
-             [(selection)]="this.m.selectedTodos"
-             [globalFilterFields]="['title',  'completed']"
-             [paginator]="true"
-             [rowHover]="true"
-             [rows]="10"
-             [showCurrentPageReport]="true"
-             [tableStyle]="{ width: '100%'}"
-             [value]="this.m.todos"
-             currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+  <p-table #dt
+           [(selection)]="this.m.selectedTodos"
+           [globalFilterFields]="['title',  'completed']"
+           [paginator]="todoService.m.todos.length > 10 && true"
+           [rowHover]="true"
+           [rows]="10"
+           [showCurrentPageReport]="true"
+           [tableStyle]="{ width: '100%'}"
+           [value]="this.m.todos"
+           class="p-table"
+           currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+           dataKey="id"
+           editMode="row"
 
-             dataKey="id"
-             editMode="row"
-
-    >
-      <ng-template pTemplate="caption">
-        <div class="todoHeader">
-          <div>
-            <h5 class="m-0">Search todos</h5>
-            <span class="p-input-icon-left">
+  >
+    <ng-template pTemplate="caption">
+      <div class="todoHeader">
+        <div>
+          <h5 class="m-0">Search todos</h5>
+          <span class="p-input-icon-left">
                     <i class="pi pi-search"></i>
                     <input (input)="dt.filterGlobal(this.m.searchInput, 'contains')"
                            [(ngModel)]="this.m.searchInput"
@@ -32,9 +31,9 @@
                            placeholder="Search..."
                            type="text"/>
                 </span>
-          </div>
+        </div>
 
-          <span>
+        <span>
           <button (click)="openNew()" class="p-button-success mr-2" icon="pi pi-plus" label="New"
                   pButton pRipple
                   style="margin-right: 20px"></button>
@@ -43,99 +42,99 @@
                   pButton pRipple></button>
         </span>
 
-        </div>
-      </ng-template>
-      <ng-template pTemplate="header">
-        <tr>
-          <th style="width: 4rem">
-            <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
-          </th>
-          <th pSortableColumn="title" style="min-width: 15rem; max-width: 15rem;">TASK
-            <p-sortIcon field="title"></p-sortIcon>
-          </th>
-          <th class="column" pSortableColumn="completed" style="min-width:10rem">Status
-            <p-sortIcon field="completed"></p-sortIcon>
-          </th>
-          <th class="column" style="min-width:10rem">Edit/Delete
-          </th>
+      </div>
+    </ng-template>
+    <ng-template pTemplate="header">
+      <tr>
+        <th style="width: 4rem">
+          <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+        </th>
+        <th pSortableColumn="title" style="min-width: 15rem; max-width: 15rem;">TASK
+          <p-sortIcon field="title"></p-sortIcon>
+        </th>
+        <th class="column" pSortableColumn="completed" style="min-width:10rem">Status
+          <p-sortIcon field="completed"></p-sortIcon>
+        </th>
+        <th class="column" style="min-width:10rem">Edit/Delete
+        </th>
 
-        </tr>
-      </ng-template>
-      <ng-template let-editing="editing" let-ri="rowIndex" let-todo pTemplate="body">
-        <tr [pEditableRow]="todo">
-          <td>
-            <p-tableCheckbox [value]="todo"></p-tableCheckbox>
-          </td>
-          <td>
-            <p-cellEditor>
-              <ng-template pTemplate="input">
-                <input [(ngModel)]="todo.title" pInputText required style="width: 100%" type="text">
-              </ng-template>
-              <ng-template pTemplate="output">
-                {{todo.title}}
-              </ng-template>
+      </tr>
+    </ng-template>
+    <ng-template let-editing="editing" let-ri="rowIndex" let-todo pTemplate="body">
+      <tr [pEditableRow]="todo">
+        <td>
+          <p-tableCheckbox [value]="todo"></p-tableCheckbox>
+        </td>
+        <td>
+          <p-cellEditor>
+            <ng-template pTemplate="input">
+              <input [(ngModel)]="todo.title" pInputText required style="width: 100%" type="text">
+            </ng-template>
+            <ng-template pTemplate="output">
+              {{todo.title}}
+            </ng-template>
 
-            </p-cellEditor>
-          </td>
+          </p-cellEditor>
+        </td>
 
-          <td class="column">
-            <p-cellEditor>
-              <ng-template pTemplate="input">
-                <p-dropdown [(ngModel)]="todo.completed "
-                            [options]="this.m.statuses" id="completed">
-                  <ng-template pTemplate="selectedItem">
-                    <p-tag [severity]="getSeverity(todo.completed)"
-                           [value]="todo.completed ? 'COMPLETED' : 'ACTIVE'">
-                    </p-tag>
-                  </ng-template>
-                  <ng-template let-option pTemplate="item">
-                    <p-tag [severity]="getSeverity(option.label === 'COMPLETED')"
-                           [value]="option.label"></p-tag>
-                  </ng-template>
-                </p-dropdown>
-              </ng-template>
-              <ng-template pTemplate="output">
-                <td class="column">
+        <td class="column">
+          <p-cellEditor>
+            <ng-template pTemplate="input">
+              <p-dropdown [(ngModel)]="todo.completed "
+                          [options]="this.m.statuses" id="completed">
+                <ng-template pTemplate="selectedItem">
                   <p-tag [severity]="getSeverity(todo.completed)"
-                         [value]="todo.completed ? 'COMPLETED' : 'ACTIVE'"></p-tag>
-                </td>
-              </ng-template>
-            </p-cellEditor>
-          </td>
+                         [value]="todo.completed ? 'COMPLETED' : 'ACTIVE'">
+                  </p-tag>
+                </ng-template>
+                <ng-template let-option pTemplate="item">
+                  <p-tag [severity]="getSeverity(option.label === 'COMPLETED')"
+                         [value]="option.label"></p-tag>
+                </ng-template>
+              </p-dropdown>
+            </ng-template>
+            <ng-template pTemplate="output">
+              <td class="column">
+                <p-tag [severity]="getSeverity(todo.completed)"
+                       [value]="todo.completed ? 'COMPLETED' : 'ACTIVE'"></p-tag>
+              </td>
+            </ng-template>
+          </p-cellEditor>
+        </td>
 
-          <td class="column">
-            <div class="flex align-items-center justify-content-center gap-2">
-              <button (click)="onRowEditInit(todo)" *ngIf="!editing"
-                      class="p-button-rounded p-button-warning mr-2"
-                      icon="pi pi-pencil" pButton pInitEditableRow
-                      pRipple style="margin-right: 10px"
-                      type="button"></button>
-              <button (click)="onRowEditSave(todo)" *ngIf="editing"
-                      class="p-button-rounded p-button-text p-button-success mr-2" icon="pi pi-check" pButton
-                      pRipple
-                      pSaveEditableRow
-                      type="button"></button>
-              <button (click)="onRowEditCancel(todo, ri)" *ngIf="editing"
-                      class="p-button-rounded p-button-text p-button-danger" icon="pi pi-times" pButton
-                      pCancelEditableRow
-                      pRipple
-                      type="button"></button>
-              <button (click)="deleteTodo(todo)" *ngIf="!editing"
-                      class="p-button-rounded p-button-danger"
-                      icon="pi pi-trash"
-                      pButton
-                      pRipple></button>
-            </div>
-          </td>
-        </tr>
-      </ng-template>
-      <ng-template pTemplate="summary">
-        <div class="flex align-items-center justify-content-between">In total there
-          are {{ this.m.todos ? this.m.todos.length : 0 }} todos.
-        </div>
-      </ng-template>
-    </p-table>
-  </div>
+        <td class="column">
+          <div class="flex align-items-center justify-content-center gap-2">
+            <button (click)="onRowEditInit(todo)" *ngIf="!editing"
+                    class="p-button-rounded p-button-warning mr-2"
+                    icon="pi pi-pencil" pButton pInitEditableRow
+                    pRipple style="margin-right: 10px"
+                    type="button"></button>
+            <button (click)="onRowEditSave(todo)" *ngIf="editing"
+                    class="p-button-rounded p-button-text p-button-success mr-2" icon="pi pi-check" pButton
+                    pRipple
+                    pSaveEditableRow
+                    type="button"></button>
+            <button (click)="onRowEditCancel(todo, ri)" *ngIf="editing"
+                    class="p-button-rounded p-button-text p-button-danger" icon="pi pi-times" pButton
+                    pCancelEditableRow
+                    pRipple
+                    type="button"></button>
+            <button (click)="deleteTodo(todo)" *ngIf="!editing"
+                    class="p-button-rounded p-button-danger"
+                    icon="pi pi-trash"
+                    pButton
+                    pRipple></button>
+          </div>
+        </td>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="summary">
+      <div class="flex align-items-center justify-content-between">In total there
+        are {{ this.m.todos ? this.m.todos.length : 0 }} todos.
+      </div>
+    </ng-template>
+  </p-table>
+
 </div>
 
 <p-dialog [(visible)]="this.m.todoDialog" [modal]="true" [style]="{ width: '450px' }" header="Todo Details"
@@ -181,3 +180,4 @@
 
 <br>
 <br>
+

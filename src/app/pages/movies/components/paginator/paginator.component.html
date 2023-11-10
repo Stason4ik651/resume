@@ -1,8 +1,8 @@
 <div *ngIf="dataService.totalPages > 1" class="card flex justify-content-center">
-  <p-paginator
-    (onPageChange)="onPageChange($event)"
-    [first]="filtersService.page - 1"
-    [rows]="1"
-    [totalRecords]="dataService.totalPages">
+  <p-paginator (onPageChange)="onPageChange($event)"
+               [first]="filtersService.page - 1"
+               [rows]="1"
+               [totalRecords]="dataService.totalPages">
+
   </p-paginator>
 </div>

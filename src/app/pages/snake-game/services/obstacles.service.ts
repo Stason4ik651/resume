@@ -27,7 +27,7 @@ export class ObstacleService {
   }
 
   draw(gameBoard: any): void {
-    this.m.obstacles.forEach((position) => {
+    this.m.obstacles.forEach((position: Position): void => {
       const obstacleElement: HTMLDivElement = document.createElement('div');
       obstacleElement.style.gridRowStart = position.y.toString();
       obstacleElement.style.gridColumnStart = position.x.toString();

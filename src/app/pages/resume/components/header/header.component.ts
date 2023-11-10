@@ -1,4 +1,4 @@
-import { Component, ElementRef, Renderer2 } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
@@ -12,12 +12,11 @@ export class HeaderComponent {
 
   constructor(
     private router: Router,
-    private renderer: Renderer2,
     private el: ElementRef,
   ) {
-    this.router.events.subscribe((event) => {
+    this.router.events.subscribe((event): void => {
       if (event instanceof NavigationEnd) {
-        const url = event.url;
+        const url: string = event.url;
         this.menuClass = this.getMenuClass(url);
       }
     });
@@ -28,7 +27,7 @@ export class HeaderComponent {
       case '/':
         return 'header';
       case '/watches':
-        return 'unfixed-header';
+        return 'header';
       case '/calculator':
         return 'unfixed-header';
       case '/movies':
