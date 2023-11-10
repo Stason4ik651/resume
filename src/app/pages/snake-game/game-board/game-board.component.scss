@@ -8,6 +8,7 @@
   flex-direction: column;
 
   .mobile-controls {
+
     display: none;
     flex: 1;
 
@@ -352,11 +353,20 @@
 @media only screen and (max-width: 1025px) {
 
   .mobile-controls {
+    top: 50%;
+    position: absolute;
     margin-top: 10px;
     display: flex !important;
     justify-content: center;
     align-items: center;
     width: 100%;
+  }
+
+}
+
+@media only screen and (min-width: 500px) {
+  .mobile-controls {
+    bottom: 0;
   }
 
 }
