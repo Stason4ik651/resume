@@ -193,20 +193,24 @@ section {
 /*!* Todo Styles *!*/
 .todo-wrapper {
   font-family: var(--font-family);
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 150px 0;
-  max-width: 100%;
+  padding: 20px 0;
+}
 
+.todo-wrapper .todo {
+  width: 75vw;
 }
 
 /*Задній фон #todo*/
 #todo .p-paginator {
   background: white;
+  border: solid #e9ecef;
+  border-width: 0;
   border-radius: 0;
 }
-
 
 /*Неактивні цифри #todo*/
 #todo .p-paginator .p-paginator-pages .p-paginator-page {
@@ -267,7 +271,7 @@ section {
   background: #ffffff;
   color: #495057;
   padding: 0 1.5rem 2rem 1.5rem;
-  height: 250px;
+  height: 500px;
   border: none;
 }
 
@@ -293,21 +297,59 @@ section {
   color: #ffffff;
   background: #22C55E;
   border: 1px solid #22C55E;
+  margin-right: 10px;
 }
 
+.p-button {
+  margin-top: 5px;
+  padding: 0.5rem 0.95rem;
+}
 
-.p-datatable .p-datatable-tbody > tr > .column, .p-datatable .p-datatable-thead > tr > .column {
+.p-button.p-button-success {
+  padding: 0.5rem 1.45rem;
+}
+
+.p-button.p-button-icon-only.p-button-rounded {
+  height: 2.5rem;
+}
+
+.p-button.p-button-icon-only {
+  width: 2.5rem;
+}
+
+.p-datatable-wrapper table {
+  width: 100%;
+}
+
+p-table .p-datatable > .p-datatable-wrapper {
+  overflow: unset;
+}
+
+.p-datatable .p-datatable-thead > tr > th {
   text-align: center;
+  padding: 1rem 0.6rem;
+}
 
+.p-datatable .p-datatable-tbody > tr {
+  height: 5.3rem;
 }
 
 .p-datatable .p-datatable-tbody > tr > td {
-  /*max-width: 600px;*/
   word-break: break-all;
+  text-align: center;
+  padding: 1rem 0.6rem;
+}
+
+.p-datatable .p-datatable-header {
+  padding: 0.75rem 0.5rem;
 }
 
 h5 {
-  font-size: 2px;
+  font-size: 20px;
+}
+
+.p-dropdown .p-dropdown-trigger {
+  width: 1.5rem;
 }
 
 .todoHeader {
@@ -316,16 +358,12 @@ h5 {
   justify-content: space-between;
 }
 
-.p-toast .p-toast-message.p-toast-message-success {
-  background: #ffffff;
-  border: solid #9473eb;
-  border-width: 0 0 0 6px;
-  color: black;
+.todoHeader span {
+  margin-left: 5px;
 }
 
-
 .p-toast .p-toast-message.p-toast-message-success .p-toast-message-icon, .p-toast .p-toast-message.p-toast-message-success .p-toast-icon-close {
-  color: #9473eb;
+  color: rgba(4, 218, 7, 0.74);
 }
 
 .top {
@@ -465,6 +503,38 @@ h5 {
     width: 80%;
   }
 
+}
+
+@media (max-width: 550px) {
+  .todo-wrapper .todo {
+    width: 100vw;
+  }
+
+  .todoHeader {
+    flex-direction: column;
+  }
+
+  .p-input-icon-left {
+    width: 75vw;
+  }
+
+  .p-input-icon-left > .p-inputtext {
+    width: 100%;
+  }
+
+  .p-datatable .p-datatable-thead > tr > th {
+    padding: 0.8rem 0.2rem;
+  }
+
+  .p-datatable .p-datatable-tbody > tr > td {
+    word-break: break-all;
+    padding: 0.8rem 0.2rem;
+  }
+
+  .p-dropdown .p-dropdown-trigger {
+    margin-right: 5px;
+    width: 1rem;
+  }
 }
 
 
