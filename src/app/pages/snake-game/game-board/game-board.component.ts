@@ -80,7 +80,7 @@ export class GameBoardComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   dPadMovement(direction: DirectionKeys): void {
-    this.snakeService.input.setDirection(direction);
+    this.snakeService.input.snakeStatus(direction);
   }
 
   update(): void {

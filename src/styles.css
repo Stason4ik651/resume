@@ -192,12 +192,11 @@ section {
 
 /*!* Todo Styles *!*/
 .todo-wrapper {
-  font-family: var(--font-family);
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px 0;
+  padding: 100px 0;
 }
 
 .todo-wrapper .todo {
@@ -207,8 +206,7 @@ section {
 /*Задній фон #todo*/
 #todo .p-paginator {
   background: white;
-  border: solid #e9ecef;
-  border-width: 0;
+  border: 0 solid #e9ecef;
   border-radius: 0;
 }
 
@@ -232,6 +230,7 @@ section {
   color: black;
   border-radius: 5px;
 }
+
 
 /*Hover для стрілок #todo*/
 #todo .p-paginator .p-paginator-first:not(.p-disabled):not(.p-highlight):hover,
@@ -266,6 +265,7 @@ section {
   color: #000;
   border: none;
 }
+
 
 #tododialog .p-dialog .p-dialog-content {
   background: #ffffff;
